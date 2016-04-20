@@ -1,0 +1,49 @@
+Description of files 
+
+1) Implementation_Details.pdf contains the method of implementation of the parallel algorithms.
+2) Results_assnmnt1.pdf contains the execution time , speedup values of the algorithms
+3) matmul_checkerboard.c contains the code for parallel matrix-matrix multiplication
+4) cb is the executable file for matrix matrix multiplication
+5) laplace.c contains the code for parallel laplace approximation.
+6) lp is the executable file for laplace approximation.
+7) input2.txt is the text file to be given as the input file (along with full path) while executing the  executable file "lp".
+
+
+*************************************************************************************************
+compiling matrix multiplication 
+*********************************
+mpicc -o cb matmul_checkerboard.c
+**********************************
+
+
+Executing matrix multiplication
+*********************************
+mpirun -n 1 ./cb
+   	or
+mpirun -n 2 ./cb
+	or
+mpirun -n 4 ./cb
+	or
+mpirun -n 8 ./cb
+*****************************************************************************************************
+
+
+compiling Laplace Approximation
+*******************************
+mpicc -o lp laplace.c
+*******************************
+
+Executing laplace appromication
+*******************************
+mpirun -n 1 ./lp
+   	or
+mpirun -n 2 ./lp
+	or
+mpirun -n 4 ./lp
+	or
+mpirun -n 8 ./lp
+
+
+then enter input2 file as the input and enter the acceptance value.
+
+**********************************************************************************************************
